@@ -1,2 +1,2 @@
-def fist_test():
+def test_additional():
     assert 2 + 2 == 4
