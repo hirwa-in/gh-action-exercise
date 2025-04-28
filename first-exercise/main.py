@@ -6,7 +6,7 @@ coffe_maker = CoffeeMaker()
 money_machine = MoneyMachine()
 
 while True:
-    user_choice = input("What would you like? (espresso/latte/cappuccino/): ")
+    user_choice = input("What would you like? (espresso/latte/cappuccino//): ")
     items = ["espresso", "latte", "cappuccino"]
     if user_choice == "off":
         break
