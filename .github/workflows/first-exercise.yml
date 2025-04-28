@@ -32,6 +32,11 @@ jobs:
           cd first-exercise
           pip install -r requirements.txt
 
+      - name: Lint with flake8
+        run: |
+          cd first-exercise
+          flake8 . --exclude=venv --max-line-length=108
+
       - name: Run tests
         run: |
           cd first-exercise
