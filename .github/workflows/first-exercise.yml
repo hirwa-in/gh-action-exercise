@@ -1,0 +1,36 @@
+name: Test First Python Project
+on:
+  push:
+    paths:
+      - '.first-exercise/**'
+  pull_request:
+    paths:
+      - './first-exercise/**'
+
+
+jobs:
+  test-project-a:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/requirements.txt
+      - name: Set up Python
+        uses: action/setup-python@4
+        with:
+          python-version: '3.11'
+      - name: install dependencies
+        run: |
+          cd first-exercise
+          pip install -r requirements.txt
+      - name: Lint with flake8
+        run: |
+          flake8 . --exclude=venv --max-line-length=105
+
+      - name: Run tests
+        run: |
+          cd first-exercise
+          pytest tests/test_main.py
+          
