@@ -35,6 +35,6 @@ jobs:
       - name: Lint with flake8
         run: |
           cd first-exercise
-          flake8 . --exclude=venv --max-line-length=
+          flake8 . --exclude=venv --max-line-length=105
 
           
