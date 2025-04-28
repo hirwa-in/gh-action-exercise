@@ -2,7 +2,7 @@ name: Test First Python Project
 on:
   push:
     paths:
-      - '.first-exercise/**'
+      - './first-exercise/**'
   pull_request:
     paths:
       - './first-exercise/**'
